@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Useful", "Useful\Useful.csproj", "{79E3B86E-C6DD-4A84-97D9-14A51B0E4B58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Useful", "Useful\Useful.csproj", "{79E3B86E-C6DD-4A84-97D9-14A51B0E4B58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Useful.Tests", "Useful.Tests\Useful.Tests.csproj", "{60D7F2C8-E11D-4BE9-B521-5C91F2CD2E9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Useful.Tests", "Useful.Tests\Useful.Tests.csproj", "{60D7F2C8-E11D-4BE9-B521-5C91F2CD2E9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{38188EF0-E0FC-4755-A77F-D78A91B12BB8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		readme.md = readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
