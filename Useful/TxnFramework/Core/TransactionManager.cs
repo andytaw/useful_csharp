@@ -10,12 +10,12 @@
 
         }
 
-        public DtoOut Execute<Txn, DtoIn, DtoOut>(Txn txn, DtoIn payload) where Txn : ITransaction<DtoIn, DtoOut>
+        public void Execute<Txn>(Txn txn) where Txn : ITransaction
         {
             // carry out authorisation
 
             // validate
-            var validationResults = Validate(payload).Concat(txn.Validate(payload));
+            var validationResults = txn.Validate();
 
             if (validationResults.Any())
             {
@@ -25,17 +25,9 @@
             // logging
 
             // execute
-            var retval =  txn.Execute(payload);
+            txn.Execute();
 
             // logging
-
-            return retval;
-        }
-
-        private IEnumerable<ValidationResult> Validate(object payload)
-        {
-            // do annotation-based validation
-            return new List<ValidationResult>();
         }
     }
 }

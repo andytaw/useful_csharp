@@ -1,15 +1,15 @@
-﻿namespace Useful.TxnFramework.Examples.AddTxn
+﻿namespace Useful.TxnFramework.Examples.MultiplyTxn
 {
     using System.Collections.Generic;
     using Useful.TxnFramework.Core;
 
-    public class AddTxn : BaseTransaction<AddTxnDtoIn, AddTxnDtoOut>, ITransaction
+    public class MultiplyTxn : BaseTransaction<MultiplyTxnDtoIn, MultiplyTxnDtoOut>, ITransaction
     {
         public void Execute()
         {
-            this.Output = new AddTxnDtoOut
+            this.Output = new MultiplyTxnDtoOut
             {
-                Result = this.Input.A + this.Input.B
+                Result = this.Input.A * this.Input.B
             };
         }
 

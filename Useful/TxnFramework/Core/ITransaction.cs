@@ -2,10 +2,10 @@
 {
     using System.Collections.Generic;
 
-    public interface ITransaction<DtoIn, DtoOut>
+    public interface ITransaction
     {
-        IEnumerable<ValidationResult> Validate(DtoIn payload);
+        IEnumerable<ValidationResult> Validate();
 
-        DtoOut Execute(DtoIn payload);
+        void Execute();
     }
 }
